@@ -1,0 +1,1095 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color:rgb(0, 47, 255);
+    --primary-color-dark:#4d9964;
+    --white:#ffffff;
+    --deep-yellow : rgba(0, 255, 98, 0.473);
+    --max-width:1200px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'ubuntu', sans-serif;
+
+}
+body{
+    scroll-behavior: smooth;
+}
+.whole_body{
+    overflow: hidden;
+    scroll-behavior: smooth;
+    
+}
+section {
+    width: 100vw;
+    height: 80vh;
+    overflow: hidden;
+
+}
+.header{
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center to left;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4)), url(image/african-american-man-doing-laundry.jpg)
+}    
+
+nav{
+    width: 100%;
+    height: 10vh;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+nav .inner_nav{
+    width: 80%;
+    height: 100%;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .inner_nav .logo img{
+    width: 250px;
+}
+nav ul{
+    list-style: none;
+    
+}
+nav ul li{
+    display: inline-block;
+    padding: 0 10px;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    font-weight: lighter;
+}
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 2px;
+    width: 0px;
+    height: 2px;
+    background-color:  var(--primary-color-dark);
+    border-radius: 30px;
+     transition: 0.4s ;
+
+}
+nav ul li a:hover::after{
+    width: 50px;
+}
+nav button{
+    padding: 8px 30px;
+    font-weight: bold;
+    white-space: nowrap;
+    background: transparent;
+    border: 2px solid var(--primary-color-dark);
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 7px;
+    
+
+}
+nav button:hover{
+    background-color: var(--primary-color-dark);
+}
+.inner_nav .ri-menu-3-line{
+    display: none;
+}
+.ri-close-large-line {
+    display: none;
+}
+/* MAIN HERO SECTION */
+
+main{
+    width: 80%;
+    height: calc(80vh - 10vh);
+    /* background-color: aqua; */
+     display: flex;
+    align-items: center;
+    justify-content: center
+}
+main .inner_main{
+  width: 70%;
+  height: 80%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+     padding: 50px 50px;
+}
+main .inner_main p{
+    color: rgb(204, 200, 200);
+    font-size: 16px;
+}
+main .inner_main p:nth-of-type(2){
+    color: var(--primary-color-dark);
+    font-size: 16px;
+    margin-top: 8px;
+}
+main .inner_main h1{
+    font-size: 43px;
+    color: var(--white);
+}
+main .btn{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+main .btn button{
+        padding: 8px 40px;
+    font-weight: bold;
+    white-space: nowrap;
+    background: transparent;
+    border: 2px solid var(--primary-color-dark);
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 2px;
+}
+main .btn button:hover{
+    background-color: #4d9964;
+}
+main .btn #btn{
+    background-color: #4d9964;
+}
+main .btn #btn:hover{
+    background-color: transparent;
+}
+
+
+/* ABOUT SLIDE */
+
+article{
+    width: 100vw;
+    height: 90vh;
+    /* background-color: #4d9964; */
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.left{
+    width: 50%;
+    height: 100%;
+    /* background-color: yellow; */
+        display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inner_left{
+    width: 500px;
+    height: 400px;
+    /* background-color: aqua; */
+    position: relative;
+    border: 5px solid var(--primary-color);
+    /* z-index: 1; */
+    
+    
+}
+.inner_left .maid{
+     width: 300px;
+    height: 400px;
+    background-image: url(image/banner.jpg);
+     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: -60px;
+    left: 40px;
+    border: 3px solid var(--white);
+    z-index: 3;
+}
+
+.inner_left .bucket{
+     width: 300px;
+    height: 400px;
+    z-index: -1;
+    background-image: url(image/unpleased-holding-bucket-cleaning-tools-with-sponge-young-africanamerican-cleaner-male-uniform-with-gloves-isolated-green-background.jpg);
+     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+    position: absolute;
+    bottom: -60px;
+    right: -40px;
+    border: 3px solid var(--white);
+}
+
+/* RIGHT SIDE  */
+
+.right{
+      width: 50%;
+    height: 100%;
+    /* background-color: blue; */
+        display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.inner_right{
+    width: 500px;
+    height: 400px;
+    /* background-color: #4d9964; */
+    padding: 40px 30px;   
+    color: var(--white);
+    
+}
+.inner_right h3{
+    position: relative;
+    color: gray;
+    font-size: 30px;
+    margin-top: 20px;
+    text-transform: capitalize;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.inner_right h3::after{
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 2px;
+    width: 15px;
+    height: 4px;
+    background-color:  var(--primary-color-dark);
+    border-radius: 30px;
+     transition: 0.4s ;
+
+}
+.inner_right h3:hover::after{
+    width: 200px;
+}
+.inner_right p:nth-of-type(1){
+    color: var(--primary-color-dark);
+    font-weight: bold;
+    
+}
+.inner_right p:nth-of-type(2){
+    color: var(--primary-color-dark);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.inner_right p:nth-of-type(3){
+    text-align: left;
+    color: gray;
+}
+
+
+.inner_right .social{
+    /* background-color: aqua; */
+    margin-top: 30px;
+}
+.inner_right .social i{
+    color: var(--primary-color-dark);
+    padding: 10px 5px;
+    font-size: 30px;
+}
+/* SERVICES RENDERING */
+
+.article{
+    width: 100vw;
+    height:  1800px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+.article .heading{
+    text-align: center;
+}
+.article .heading h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: gray;
+}
+.article .heading p{
+    font-size: 18px;
+    color: var(--primary-color-dark);
+       font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.article .flow{
+    width: 100%;
+
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* background: red; */
+
+}
+.article .flow .left-2{
+  width: 40%;
+  height: 100%;
+  /* background-color: yellow; */
+  padding: 100px 70px;
+}
+.article .flow .left-2 h2{
+    color: gray;
+    font-size: 20px;
+}
+.article .flow .left-2 ul{
+    list-style: none;
+}
+.article .flow .left-2 ul li{
+    font-size: 15px;
+    margin-top: 10px;
+    color: gray;
+    display: inline-block;
+}
+
+.article .flow .left-2 ul i{
+    color: var(--primary-color-dark);
+    padding: 0 10px;
+    font-size: 30px;
+}
+.article .flow .left-2 button{
+    padding: 10px 20px;
+    background-color: var(--primary-color-dark);
+    color: #ffffff;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+
+.article .flow .right-2{
+     width: 60%;
+     height: 75%;
+     /* background-color: blue; */
+      display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  
+}
+.article .flow  #right{
+     width: 60%;
+     height: 75%;
+     /* background-color: blue; */
+      display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  
+}
+
+.article .flow .right-2 .inner{
+    width: 70%;
+    height: 100%;
+    background-image: url(image/cheerful-african-american-woman-sitting-with-earphones-read-magazine-near-washing-machine-selfservice-laundry.jpg);
+         background-size: cover;
+    background-repeat: no-repeat;
+    background-position:top center ;
+
+}
+.article .flow .right-2 .inner2{
+    width: 75%;
+    height: 100%;
+    background-image: url(image/parlor.jpg);
+         background-size: cover;
+    background-repeat: no-repeat;
+    background-position:top center ;
+
+}
+.article .flow .right-2 .inner3{
+    width: 75%;
+    height: 100%;
+    background-image: url(image/tiolet.jpg);
+         background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+}
+
+/* POSTER */
+
+.large_poster{
+    width: 100vw;
+    height: 30vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5)), url(image/hands-holding-cleaning-tools-solutions.jpg);
+    background-position: center to left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 30px;
+}
+.large_poster h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+
+}
+.large_poster button{
+    padding: 10px 20px;
+    background-color: var(--primary-color-dark);
+    color: var(--white);
+    font-weight: bolder;
+    border: none;
+}
+
+
+/* IMAGESLIDER */
+
+.imageslide{
+    width: 100vw;
+    height: 60vh;
+    /* background: black; */
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.imageslide .slider{
+      width: 80%;
+      height: 80%;
+      /* background-color: blue; */
+      display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.imageslide .slider img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+}
+
+/* REASON AND COMMENT */
+
+.client-comment{
+    width: 100vw;
+    height:  80vh ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+}
+
+.client-comment .reason{
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+.client-comment .reason p{
+    color: gray;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.client-comment .reason p:nth-of-type(1){
+    color: var(--primary-color-dark);
+}
+.client-comment .reason p:nth-of-type(2){
+    line-height: 20px;
+}
+
+.client-comment .reason h3{
+    font-size: 30px;
+    color: rgb(59, 56, 56);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.client-comment .flow{
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    height:  70% ;
+    background-color: var(--white);
+}
+.client-comment .flow .boxes{
+    /* width: 200px;
+    height: 200px; */
+     background: linear-gradient(to right, whitesmoke 70%, white);
+    padding: 65px 55px;
+    position: relative;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    /* font-size: 14px; */
+    box-shadow: 13px 5px 13px whitesmoke, 3px 15px 13px whitesmoke;
+}
+.client-comment .flow .boxes h5{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+.client-comment .flow .boxes p{
+    font-size: 13px;
+     font-family: 'ubuntu', sans-serif;
+}
+.client-comment .flow .boxes .lit-box{
+    position: absolute;
+    padding: 10px;
+    background-color: var(--primary-color-dark);
+    left: 20px;
+    top: -10px;
+    
+    
+}
+.client-comment .flow .boxes .lit-box i{
+    color: var(--white);
+}
+
+/* footer */
+
+
+.footer{
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(126, 74, 126);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    overflow: hidden;
+     padding: 0px 80px;
+
+    /* flex-wrap: wrap; */
+}
+
+.footer .colum1{
+    width: 26%;
+    height: 80%;
+    /* background: blue; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    color: black   
+}
+.footer .colum1 .colum_image{
+    width: 250px;
+    height: 30px;
+    /* background-color: red; */
+    margin-bottom: 30px;
+    
+}
+.footer .colum1 .colum_image h1{
+    color: var(--primary-color-dark);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 38px;
+    
+}
+.footer .colum1 p{
+    color: var(--white);
+    font-size: 14px;
+    line-height: 20px;
+}
+.footer .colum1 .social{
+    margin-top: 10px;
+    color: var(--primary-color-dark);
+}
+
+.footer .colum2,.colum3{
+    width: 20%;
+    height: 80%;
+    /* background: blue; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    color: black   
+}
+.footer .colum2, h3{
+    color: var(--white);
+}
+.footer .colum2, ul{
+    list-style: none;
+
+}
+.footer .colum2 ul li{
+    margin: 10px 0;
+    font-size: 12px;
+}
+.footer .colum2 ul li a{
+   color: white;
+   text-decoration: none;
+   
+}
+
+.footer .colum3, h3{
+    color: var(--white);
+}
+.footer .colum3, ul{
+    list-style: none;
+
+}
+.footer .colum3 ul li{
+    margin: 10px 0;
+    font-size: 12px;
+}
+.footer .colum3 ul li a{
+   color: white;
+   text-decoration: none;
+   
+}
+.footer .colum4{
+    /* width: 28%;
+    height: 80%;
+    background: blue;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    color: black    */
+    color: var(--white);
+}
+
+
+
+
+
+.footer .colum4 img{
+    width: 50px;
+}
+
+/* BOTTOM */
+
+.bottom{
+    text-align: center;
+    background-color: purple;
+    padding: 20px 0;
+    color: var(--white);
+    font-weight: bold;
+}
+
+
+
+
+
+/* MEDIA QUERY */
+
+
+    @media (max-width: 768px) {
+      main{
+        width: 100%;
+       
+      }
+      .header{
+        background-position:  right ;
+      }
+      nav{
+        position: fixed;
+        z-index: 1000;
+      }
+      nav .inner_nav{
+        width: 100%;
+        background-color:  purple;
+      }
+      nav ul{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 0px;
+        background-color: rgba(77, 0, 0, 1);
+        top: 55px;
+        left: 0;
+        transition: 0.6s;
+        overflow: hidden;
+        z-index: 1000;
+        
+      }
+      nav ul li a{
+        overflow: hidden;
+      }
+      .close_menu{
+        height: 400px;
+      }
+      #nav_btn{
+        display: none;
+      }
+         
+      main .inner_main{
+        width: 100%;
+        /* background-color: aqua; */
+        flex-direction: column;
+        text-align: center;
+      }
+      main .btn{
+    justify-content: center;
+    
+}
+
+.inner_nav .ri-menu-3-line{
+    display: block;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    padding:0 20px;
+}
+.inner_nav .ri-menu-3-line:hover{
+    color: var(--primary-color-dark);
+}
+
+/*  ABOUT SECTION */
+
+article{
+    width: 100vw;
+    height: 160vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.left{
+    width: 100%;
+    height: 50%;
+ 
+}
+.inner_left{
+    width: 350px;
+    height: 300px;
+    /* background-color: aqua; */
+    position: relative;
+    border: 5px solid var(--primary-color);
+    /* z-index: 1; */
+    
+    
+}
+.inner_left .maid{
+     width: 280px;
+    height: 300px;
+    z-index: 3;
+    left: -45px;
+}
+
+.inner_left .bucket{
+     width: 300px;
+    height: 300px;
+    z-index: -1;
+    right: -80px;
+  
+}
+
+/* RIGHT SIDE  */
+
+.right{
+      width: 100%;
+    height: 50%;
+    /* background-color: blue; */
+        display: flex;
+    align-items: center;
+    
+}
+.inner_right{
+    width: 500px;
+    height: 400px;
+    /* background-color: #4d9964; */
+    padding: 40px 45px;   
+    color: var(--white);
+    
+}
+
+
+.inner_right .social{
+    /* background-color: aqua; */
+    margin-top: 10px;
+}
+.inner_right .social i{
+    color: var(--primary-color-dark);
+    padding: 4px 5px;
+    font-size: 20px;
+}
+.inner_right p:nth-of-type(3){
+    text-align: left;
+    color: gray;
+    font-size: 12px;
+}
+
+
+
+    /* SERVICES RENDERING */
+
+.article{
+    /* width: 100vw; */
+    height:  2200px ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.article .heading{
+    text-align: left;
+    padding: 0 40px;
+}
+.article .heading h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: gray;
+    margin-top: 10px;
+}
+.article .heading p{
+    font-size: 18px;
+    color: var(--primary-color-dark);
+       font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.article .flow{
+    width: 100%;
+     height: 100vh;
+      display: block;
+  
+
+}
+.article .flow .left-2{
+  width: 100%;
+  height: 50%;
+  /* background-color: yellow; */
+  padding: 30px 40px;
+  display: flex;
+     align-items: flex-end;
+     text-align: right;
+    justify-content: center;
+    flex-direction: column; 
+}
+.article .flow .left-2 h2{
+    color: gray;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+.article .flow .left-2 ul li{
+    font-size: 15px;
+    margin-top: 5px;
+    text-align: justify;
+    
+    
+}
+
+.article .flow .left-2 ul i{
+    color: var(--primary-color-dark);
+    padding: 0 10px;
+    font-size: 20px;
+}
+.article .flow .left-2 button{
+    padding: 10px 20px;
+    background-color: var(--primary-color-dark);
+    color: #ffffff;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+
+.article .flow .right-2{
+     width: 100%;
+     height: 40%;
+     /* background-color: blue; */
+      display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 30px;
+  
+}
+
+/* FLOW2 */
+
+.article #flow2{
+    width: 100%;
+     height: 100vh;
+      display: block;
+      /* background-color: blue; */
+  
+
+}
+.article .flow  #right{
+     width: 100%;
+     height: 45%;
+     /* background-color: yellow; */
+      display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 40px;
+  
+}
+
+.article .flow .right-2 .inner{
+    width: 70%;
+    height: 100%;
+    background-image: url(image/cheerful-african-american-woman-sitting-with-earphones-read-magazine-near-washing-machine-selfservice-laundry.jpg);
+         background-size: cover;
+    background-repeat: no-repeat;
+    background-position:top center ;
+
+}
+.article .flow .right-2 .inner2{
+    width: 75%;
+    height: 100%;
+    background-image: url(image/parlor.jpg);
+         background-size: cover;
+    background-repeat: no-repeat;
+    background-position:top center ;
+
+
+}
+.article .flow .right-2 .inner3{
+    width: 75%;
+    height: 100%;
+    background-image: url(image/tiolet.jpg);
+         background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+}
+.article #flow2  .left-2{
+     width: 100%;
+  height: 50%;
+  /* background-color: yellow; */
+  padding: 30px 40px;
+  display: flex;
+     align-items: flex-start;
+     text-align: left;
+    justify-content: center;
+    flex-direction: column; 
+}
+
+/* FLOW3 */
+
+.article #flow_3{
+    width: 100%;
+     height: 100vh;
+      display: block;
+      /* background-color: blue; */
+  
+
+}
+/* POSTER */
+
+.large_poster{
+    height: 20vh;
+    gap: 10px;
+}
+.large_poster h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    font-size: 20px;
+
+}
+.large_poster button{
+    padding: 10px 20px;
+    background-color: var(--primary-color-dark);
+    color: var(--white);
+    font-weight: bolder;
+    border: none;
+}
+
+
+/* IMAGESLIDER */
+.imageslide .slider img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.client-comment{
+    height:  50vh ;
+   
+}
+.imageslide .slider{
+      gap: 20px;
+     
+}
+
+
+
+/*  */
+
+.imageslide{
+    width: 100vw;
+    height: 60vh;
+    /* background: black; */
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.imageslide .slider{
+      width: 80%;
+      height: 80%;
+      /* background-color: blue; */
+      display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.imageslide .slider img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+/* REASON AND COMMENT */
+
+.client-comment{
+    width: 100vw;
+    height:  160vh ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+}
+
+.client-comment .reason{
+    text-align: left;
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px 40px;
+}
+.client-comment .reason p{
+    color: gray;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.client-comment .reason p:nth-of-type(1){
+    color: var(--primary-color-dark);
+}
+.client-comment .reason p:nth-of-type(2){
+    line-height: 20px;
+}
+
+.client-comment .reason h3{
+    font-size: 30px;
+    color: rgb(59, 56, 56);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.client-comment .flow{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height:  70% ;
+    background-color: transparent;
+}
+.client-comment .flow .boxes{
+
+    padding: 35px 35px;
+    box-shadow: none;
+}
+
+
+
+}
+    
