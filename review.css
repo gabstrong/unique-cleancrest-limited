@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-[data-scroll] {
+/* [data-scroll] {
   transition: all 2s;
 }
 [data-scroll="in"] {
@@ -13,9 +13,10 @@
 [data-scroll="out"] {
   opacity: 0;
   transform: translateX(-200px);
-}
+} */
 .container {
   position: relative;
+  overflow-x: hidden;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -26,7 +27,7 @@
 .container .back_home {
   padding: 20px;
   background-color: green;
-  position: absolute;
+  position: fixed;
   top: 5px;
   right: 10px;
   border-radius: 10px;
@@ -55,46 +56,121 @@
   justify-content: flex-start;
   flex-direction: column;
   padding: 30px 30px;
+  /* overflow-x: auto; */
 }
 .inner_container h1 {
   color: white;
   font-size: 3rem;
 }
-.inner_container .box_wrapper {
+
+.carousel{
+    margin: 100px auto;
+    width: 195%;
+    /* border: 5px solid red; */
+    display: flex;
+    overflow-x: auto;
+
+}
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 40s infinite linear;
+    padding-right: 1em;
+}
+.card{
+    flex: 0 0 5em;
+    height: 5em;
+    padding: 1em;
+    background: whitesmoke;
+    font-size: 3rem;
+    border-radius: .2em;
+    text-align: center;
+    align-content:center ;
+}
+.card h2{
+  font-size: 12px;
+}
+@keyframes spin {
+    from{translate: 0}
+    to{translate: -100%;}
+}
+/* .inner_container .group {
   display: flex;
-  width: 100%;
+  width: 90%;
   height: 90%;
-  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: rgba(0, 0, 0, 0.5);
   align-items: center;
   justify-content: center;
-  /* flex-wrap: wrap; */
   margin-top: 30px;
   gap: 20px;
+ overflow-x: scroll;
 }
-.inner_container .box_wrapper .box {
-  width: 20%;
-  height: 100%;
+.inner_container .group .card {
+  width: 80%;
+  height: 90%;
   background-color: rgb(224, 221, 221);
-  padding: 10px 20px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  flex-direction: column;
-  /* gap: 20px; */
+  padding: 20px 20px;
   border-radius: 20px;
   overflow: hidden;
   color: rgb(70, 67, 67);
-  /* position: relative; */
-  /* padding: 60px; */
+
+} */
+.inner_container .group .card p {
+  font-size: 6px;
 }
 
-.inner_container .box_wrapper .box img {
-  width: 100px;
-  height: 100px;
+.inner_container .group .card .profile {
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
+  background: url(image/user.JPG);
+  background-position: center;
+  background-size: cover;
+  float: left;
+  shape-outside: circle();
+  margin: 10px 10px 10px 0;
 }
+.inner_container .group .card #image2 {
+  background: url(image/silver.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.inner_container .group .card #image3 {
+  background: url(image/silver.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.inner_container .group .card #image4 {
+  background: url(image/business-man-banner-concept-with-copy-space.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.inner_container .group .card #image7 {
+  background: url(image/stylish-businessman-office.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.inner_container .group .card #image5 {
+  background: url(image/business-man-banner-concept-with-copy-space.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.inner_container .group .card #image6 {
+  background: url(image/business-man-banner-concept-with-copy-space.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
 
 @media screen and (max-width: 414px) {
+  body {
+    overflow-x: hidden;
+  }
   .container {
     overflow: hidden;
     /* width: 100%; */
@@ -129,10 +205,16 @@
     gap: 10px;
     /* flex-wrap: wrap-reverse; */
   }
-  .inner_container .box_wrapper .box img {
+
+  .inner_container .box_wrapper .box .profile {
     width: 70px;
     height: 70px;
-    /* shape-outside: circle(); */
-    /* margin: 30px 30px 30px 0; */
+    border-radius: 50%;
+    background: url(image/user.JPG);
+    background-position: center;
+    background-size: cover;
+    float: left;
+    shape-outside: circle();
+    margin: 20px 20px 20px 0;
   }
 }

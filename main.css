@@ -211,7 +211,7 @@ article {
   height: 400px;
   /* background-color: aqua; */
   position: relative;
-  border: 5px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
   /* z-index: 1; */
 }
 .inner_left .maid {
@@ -387,6 +387,10 @@ article {
   margin-top: 25px;
   margin-left: 30px;
 }
+.article .flow .left-2 button a{
+  text-decoration: none;
+  color: white;
+}
 
 .article .flow .right-2 {
   width: 60%;
@@ -458,7 +462,88 @@ article {
   color: var(--white);
   font-weight: bolder;
   border: none;
+  
 }
+.large_poster button a{
+  text-decoration: none;
+  color: white;
+}
+
+
+/* CAROUSAL SECTION */
+.carousel{
+    margin: 100px auto;
+    width: 90%;
+    /* border: 5px solid red; */
+    display: flex;
+    overflow-x: auto;
+
+}
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 10s infinite linear;
+    padding-right: 1em;
+}
+.card{
+    flex: 0 0 5em;
+    height: 3em;
+    padding: .7em;
+    /* background: cornflowerblue; */
+    background: url(image/banner.jpg);
+     background-position: center;
+  background-size: cover;
+    font-size: 3rem;
+    border-radius: .2em;
+    text-align: center;
+    align-content:center ;
+}
+.carousel .group .card #image1 {
+  background: url(image/6395.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.carousel .group  #image2 {
+  background: url(image/6390.jpg);
+  background-position: center;
+  background-size: cover;
+}.carousel .group  #image3 {
+  background: url(image/3695418.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.carousel .group  #image4 {
+  background: url(image/11227617.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.carousel .group  #image5 {
+  background: url(image/131329-ORS39F-241.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.carousel .group  #image6 {
+  background: url(image/durban_line.jpg);
+  background-position: center;
+  background-size: cover;
+}
+@keyframes spin {
+    from{translate: 0}
+    to{translate: -70%;}
+}
+
+
+
+
+
+
+
+
 
 /* IMAGESLIDER */
 

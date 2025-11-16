@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cleaning Service - Read More</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #eef3f7 url('https://images.unsplash.com/photo-1581579188871-45ea61f2a0c8?auto=format&fit=crop&w=1200&q=60') no-repeat center top / cover;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background:green;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      backdrop-filter: blur(6px);
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(4px);
+    }
+    h2 {
+      color: green;
+      margin-bottom: 12px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    ul {
+      padding-left: 22px;
+    }
+    footer {
+      text-align: center;
+      padding: 18px;
+      background: green;
+      color: #fff;
+      margin-top: 50px;
+      backdrop-filter: blur(6px);
+    }
+    /* Banner Image */
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1598511724055-3bd293f0eae1?auto=format&fit=crop&w=1200&q=60') center/cover;
+      z-index: -1;
+      opacity: 0.35;
+    }
+    header, footer {
+      position: relative;
+      z-index: 2;
+    }
+      /* Fancy Enhancements */
+    .container {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    h2 {
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #0d6efd, #4ac4ff);
+      border-radius: 3px;
+    }
+
+    .section {
+      background: #ffffffcc;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Button Styling */
+    .btn-clean {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(90deg, #0d6efd, #4ac4ff);
+      color: #fff;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+
+    .btn-clean:hover {
+      opacity: 0.85;
+      transform: scale(1.05);
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Icon bullets */
+    ul li {
+      list-style: none;
+      position: relative;
+      padding-left: 28px;
+    }
+
+    ul li::before {
+      content: "🧼";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Professional Cleaning Services</h1>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2>About Our Cleaning Services</h2>
+      <p>
+        We provide top-tier cleaning services designed to keep your home or office spotless, fresh, and comfortable.
+        With years of experience and a highly trained team, we ensure exceptional results using eco‑friendly products
+        and modern techniques.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Why Choose Us?</h2>
+      <ul>
+        <li>Reliable and professional cleaning team</li>
+        <li>Eco‑friendly and safe cleaning materials</li>
+        <li>Flexible scheduling to fit your needs</li>
+        <li>Affordable and transparent pricing</li>
+        <li>Guaranteed customer satisfaction</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Services We Offer</h2>
+      <ul>
+        <li>Home and apartment cleaning</li>
+        <li>Office and commercial space cleaning</li>
+        <li>Deep cleaning services</li>
+        <li>Move‑in and move‑out cleaning</li>
+        <li>Post‑construction cleanup</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Our Commitment</h2>
+      <p>
+        We are committed to delivering exceptional cleanliness and creating healthier environments for our clients.
+        Our team is dedicated, trustworthy, and passionate about making every space shine.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Cleancrest Services. All Rights Reserved.
+  </footer>
+</body>
+</html>
