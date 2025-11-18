@@ -17,14 +17,14 @@
 section {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top right center;
+  background-position:  center;
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
-  background-image: url(image/landing\ logo.jpg);
+  background-image:linear-gradient(to right, rgba(23,24,26,0.5)), url(image/diabetic-woman-wearing-glucose-patch-sensor.jpg);
 }
 section .back_home {
   padding: 20px;
