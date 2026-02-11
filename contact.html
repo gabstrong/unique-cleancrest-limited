@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,18 +8,37 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="contact.css" />
+    <!-- <link rel="stylesheet" href="main.css" /> -->
     <title>Unique cleancrest contact</title>
   </head>
   <body>
+    <nav>
+      <div class="inner_nav">
+        <div class="logo">
+          <img src="image/logo.png" alt="" />
+        </div>
+
+        <ul id="menulist">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index2.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <!-- <li><a href="index.html_service">Service</a></li> -->
+          <li><a href="reviews.html">Reviews</a></li>
+        </ul>
+
+        <button id="nav_btn"><a href="contact.html">Bookings</a></button>
+        <i class="ri-menu-3-line" id="hamburger" onclick="openMenu()"></i>
+      </div>
+    </nav>
     <section>
-      <ul>
+      <!-- <ul>
         <li>
           <a class="back_home" href="index.html">
             <i class="ri-home-4-fill"></i>
             Home
           </a>
         </li>
-      </ul>
+      </ul> -->
       <div class="inner_section">
         <div class="left">
           <h2>contact us</h2>
@@ -108,5 +127,6 @@
     </section>
 
     <script src="app-contact.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

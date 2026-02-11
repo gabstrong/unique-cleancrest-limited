@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --primary-color: rgb(16, 55, 224);
-  --primary-color-dark: #1db64b;
+  --primary-color: purple;
+  --primary-color-dark: #914f91;
   --white: #ffffff;
-  --deep-yellow: rgba(0, 255, 98, 0.473);
+  --deep-yellow: purple;
   --max-width: 1200px;
 }
 
@@ -32,9 +32,10 @@ section {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center ;
-  background-image: linear-gradient(to right, rgba(35, 116, 15, 0.3)),
-    url(image/long-shot-family-relaxing-floor-together.jpg);
+  background-position: top center left;
+  background-image:
+    linear-gradient(to right, rgba(36, 30, 44, 0.521)),
+    url(image/landing\ logo.jpg);
 }
 
 [data-scroll] {
@@ -70,10 +71,21 @@ nav {
   position: fixed;
   z-index: 1000;
 }
+* Add styles for the navbar to hide and show on scroll */ nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 0.3s;
+}
+
+.hidden {
+  top: -100px; /* Adjust based on navbar height */
+}
 nav .inner_nav {
   width: 90%;
   height: 100%;
-  background-color: hsl(120, 64%, 26%);
+  background-color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -111,29 +123,27 @@ nav ul li a:hover::after {
   width: 50px;
 }
 nav button {
-  
   text-decoration: none;
   padding: 8px 30px;
   font-weight: lighter;
   /* white-space: nowrap; */
   background: white;
   border: 2px solid var(--white);
-  color: green;
+  color: var(--primary-color);
   cursor: pointer;
   border-radius: 9px;
   margin-right: 30px;
 }
-nav button a{
+nav button a {
   text-decoration: none;
-  color: green;
+  color: var(--primary-color);
 }
-nav button a:hover{
-  
-  color: white;
+nav button a:hover {
+  color: var(--primary-color);
 }
 nav button:hover {
-  background-color: rgb(14, 196, 14);
-  color: white;
+  background-color: var(--primary-color-dark);
+  color: var(--primary-color);
 }
 .inner_nav .ri-menu-3-line {
   display: none;
@@ -182,19 +192,19 @@ main .btn button {
   white-space: nowrap;
   background: transparent;
   border: 2px solid var(--white);
-  color: var(--white);
+  color: var(--primary-color);
   cursor: pointer;
   border-radius: 2px;
 }
-main .btn button a{
+main .btn button a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
 }
 main .btn button:hover {
-  background-color: green;
+  background-color: var(--primary-color);
 }
 main .btn #btn {
-  background-color: green;
+  background-color: var(--primary-color);
   border: 2px solid var(--white);
 }
 main .btn #btn:hover {
@@ -231,14 +241,14 @@ article {
 .inner_left .maid {
   width: 300px;
   height: 400px;
-  background-image: url(image/banner.jpg);
+  background-image: url(image/boss\ lady\ 2.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
   top: -60px;
   left: 40px;
-  border: 3px solid var(--white);
+  border: 10px solid var(--white);
   z-index: 3;
 }
 
@@ -246,7 +256,7 @@ article {
   width: 300px;
   height: 400px;
   z-index: -1;
-  background-image: url(image/unpleased-holding-bucket-cleaning-tools-with-sponge-young-africanamerican-cleaner-male-uniform-with-gloves-isolated-green-background.jpg);
+  background-image: url(image/boss\ lady.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -401,7 +411,7 @@ article {
   margin-top: 25px;
   margin-left: 30px;
 }
-.article .flow .left-2 button a{
+.article .flow .left-2 button a {
   text-decoration: none;
   color: white;
 }
@@ -453,7 +463,8 @@ article {
 .large_poster {
   width: 100vw;
   height: 30vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5)),
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5)),
     url(image/hands-holding-cleaning-tools-solutions.jpg);
   background-position: center to left;
   background-repeat: no-repeat;
@@ -476,88 +487,82 @@ article {
   color: var(--white);
   font-weight: bolder;
   border: none;
-  
 }
-.large_poster button a{
+.large_poster button a {
   text-decoration: none;
   color: white;
 }
 
-
 /* CAROUSAL SECTION */
-.carousel{
-    margin: 100px auto;
-    width: 90%;
-    /* border: 5px solid red; */
-    display: flex;
-    overflow-x: auto;
-
+.carousel {
+  margin: 100px auto;
+  width: 90%;
+  /* border: 5px solid red; */
+  display: flex;
+  overflow-x: auto;
 }
-.carousel::-webkit-scrollbar{
-    display: none;
+.carousel::-webkit-scrollbar {
+  display: none;
 }
-.group{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    animation: spin 10s infinite linear;
-    padding-right: 1em;
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation: spin 10s infinite linear;
+  padding-right: 1em;
 }
-.card{
-    flex: 0 0 5em;
-    height: 3em;
-    padding: .7em;
-    /* background: cornflowerblue; */
-    background: url(image/banner.jpg);
-     background-position: center;
+.card {
+  flex: 0 0 5em;
+  height: 3em;
+  padding: 0.7em;
+  /* background: cornflowerblue; */
+  background: url(image/banner.jpg);
+  background-position: center;
   background-size: cover;
-    font-size: 3rem;
-    border-radius: .2em;
-    text-align: center;
-    align-content:center ;
+  font-size: 3rem;
+  border-radius: 0.2em;
+  text-align: center;
+  align-content: center;
 }
 .carousel .group .card #image1 {
   background: url(image/6395.jpg);
   background-position: center;
   background-size: cover;
 }
-.carousel .group  #image2 {
+.carousel .group #image2 {
   background: url(image/6390.jpg);
   background-position: center;
   background-size: cover;
-}.carousel .group  #image3 {
+}
+.carousel .group #image3 {
   background: url(image/3695418.jpg);
   background-position: center;
   background-size: cover;
 }
-.carousel .group  #image4 {
+.carousel .group #image4 {
   background: url(image/11227617.jpg);
   background-position: center;
   background-size: cover;
 }
-.carousel .group  #image5 {
+.carousel .group #image5 {
   background: url(image/131329-ORS39F-241.jpg);
   background-position: center;
   background-size: cover;
 }
-.carousel .group  #image6 {
+.carousel .group #image6 {
   background: url(image/durban_line.jpg);
   background-position: center;
   background-size: cover;
 }
 @keyframes spin {
-    from{translate: 0}
-    to{translate: -70%;}
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -70%;
+  }
 }
-
-
-
-
-
-
-
-
 
 /* IMAGESLIDER */
 
@@ -638,7 +643,9 @@ article {
   border: 2px solid whitesmoke;
   border-radius: 5px;
   /* font-size: 14px; */
-  box-shadow: 13px 5px 13px whitesmoke, 3px 15px 13px whitesmoke;
+  box-shadow:
+    13px 5px 13px whitesmoke,
+    3px 15px 13px whitesmoke;
 }
 .client-comment .flow .boxes h5 {
   margin-bottom: 10px;
@@ -664,7 +671,7 @@ article {
 .footer {
   width: 100%;
   height: 50vh;
-  background-color: green;
+  background-color: var(--primary-color);
   display: flex;
   align-items: center;
   gap: 30px;
@@ -771,7 +778,7 @@ ul {
 .footer .colum4 img {
   width: 50px;
 }
-.footer .colum4 span{
+.footer .colum4 span {
   font-style: italic;
   color: blue;
 }
@@ -780,7 +787,7 @@ ul {
 
 .bottom {
   text-align: center;
-  background-color: rgb(13, 61, 13);
+  background-color: var(--primary-color);
   padding: 20px 0;
   color: var(--white);
   font-weight: bold;
@@ -789,18 +796,17 @@ ul {
 
 /* MEDIA QUERY */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   main {
     width: 100%;
   }
   .header {
-    /* background-image: url(image/african-american-man-doing-laundry.jpg); */
     background-position: center;
+    background-image: url(image/landing\ logo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: linear-gradient(to right, rgba(35, 116, 15, 0.4)),
-      url(image/long-shot-family-relaxing-floor-together.jpg);
   }
+
   nav {
     position: fixed;
     z-index: 1000;
@@ -808,7 +814,7 @@ ul {
   nav .inner_nav {
     width: 100%;
     height: 100%;
-    background-color: rgb(13, 61, 13);
+    background-color: var(--primary-color);
     border-radius: 0px;
     margin-top: 0px;
   }
@@ -820,7 +826,7 @@ ul {
     justify-content: space-around;
     width: 100%;
     height: 0px;
-    background-color: green;
+    background-color: var(--primary-color-dark);
     top: 85px;
     left: 0;
     transition: 0.6s;
@@ -839,8 +845,12 @@ ul {
 
   main .inner_main {
     width: 100%;
+    height: 100%;
     padding: 80px 70px;
     /* background-color: hsl(0, 1%, 27%); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     text-align: center;
   }
@@ -1273,7 +1283,18 @@ ul {
     color: var(--white);
   }
 
-  .footer .colum4 img {
-    width: 50px;
+  /* Add styles for the navbar to hide and show on scroll */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: top 0.3s;
   }
+
+  .hidden {
+    top: -100px; /* Adjust based on navbar height */
+  }
+
+  /* Add any additional styles for the navbar here */
 }
